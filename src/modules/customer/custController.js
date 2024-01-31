@@ -1,5 +1,5 @@
 const custServices = require('./custServices');
-const custQuery = require('../../interfaces/custQuery');
+//const custQuery = require('../../interfaces/custQuery');
 const apiConst = require('../../common/constants/apiConst');
 const successConst = require('../../common/constants/successConst');
 const errorConst = require('../../common/constants/errorConst');
@@ -13,10 +13,10 @@ const calculateEMIHandler = async (request, h) => {
       return { message: errorConst.INTERNAL_SERVER_ERROR };
     }
 
-    if (!existingCustomer) {
+     //if (!existingCustomer) {
       // If the customer doesn't exist, create a new one
       await custQuery.createCustomer(loanAmount, tenureInYears, creditScore);
-    }
+   // }
 
     // Calculate EMI using your logic
     const interestRate = await custServices.determineInterestRate(creditScore);

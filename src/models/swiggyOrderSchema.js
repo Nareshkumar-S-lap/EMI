@@ -9,7 +9,6 @@ const swiggyOrderSchema = new mongoose.Schema({
   },
   restaurant: {
     name: { type: String, required: true },
-    cuisine: { type: String, required: true },
     address: { type: String, required: true },
     
   },

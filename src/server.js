@@ -7,7 +7,7 @@ const productRoutes = require('./modules/product/productRoutes');
 
 const init = async () => {
   const server = Hapi.server({
-    port: process.env.PORT || 3000, // Use PORT from environment variables or default to 3000
+    port: process.env.PORT , 
     host: 'localhost',
   });
 
